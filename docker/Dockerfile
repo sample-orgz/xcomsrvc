@@ -2,7 +2,7 @@ FROM openjdk:8u131-jdk-alpine
 
 MAINTAINER HARISH KUMAR SINHA "harish.k.sinha@gmail.com"
 
-EXPOSE 8080
+EXPOSE 8090
 
 WORKDIR /usr/local/bin/
 
