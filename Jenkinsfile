@@ -21,7 +21,7 @@ pipeline {
          steps {
             //sh '''mvn clean package'''
             sh '''./gradlew clean build'''
-            sh 'cp xcomsrvc-0.0.1-SNAPSHOT.jar docker/'
+            sh 'cp build/libs/xcomsrvc-0.0.1-SNAPSHOT.jar docker/'
          }
       }
 
