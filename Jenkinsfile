@@ -21,11 +21,13 @@ pipeline {
          steps {
             //sh '''mvn clean package'''
             sh '''./gradlew clean build'''
+            sh 'cp xcomsrvc-0.0.1-SNAPSHOT.jar docker/'
          }
       }
 
       stage('Build and Push Image') {
          steps {
+           sh 'cd docker'  
            sh 'docker image build -t ${REPOSITORY_TAG} .'
          }
       }
